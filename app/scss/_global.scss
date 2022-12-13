@@ -1,0 +1,12 @@
+body {
+    color: #195B84;
+    font-size: $fontSize;
+    line-height: calc(22 / 18 * 100%);
+    font-family: $fontFamilyRubic;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+a {
+    transition: all .2s ease-in-out;
+}

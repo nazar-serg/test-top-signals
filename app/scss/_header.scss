@@ -1,0 +1,56 @@
+.header {
+    padding-top: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/*================================================================================*/
+.logo-header {
+    &__link {
+        font-size: 24px;
+        line-height: calc(28 / 24 * 100%);
+        text-transform: uppercase;
+        color: #2DAFD7;
+        font-weight: 700;
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../img/logo.png)no-repeat;
+            background-size: cover;
+            width: 87px;
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/*================================================================================*/
+.get-consultation-btn-header {
+    &__link {
+        font-size: 15px;
+        line-height: calc(22 / 15 * 100%);
+        color: #2DAFD7;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 2px solid #2DAFD7;
+        display: inline-block;
+        padding: 18px 14px;
+        border-radius: 5px;
+        &:hover {
+            background-color: #005570;
+            color: #fff;
+            border: 2px solid transparent;
+        }
+    }
+}

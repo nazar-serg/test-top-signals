@@ -1,0 +1,170 @@
+.top {
+    position: relative;
+    &::after {
+        background: #F3FCFF;
+        content: '';
+        position: absolute;
+        width: 200%;
+        top: 0;
+        right: 38%;
+        height: 100%;
+        z-index: -1;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+
+    }
+    &__container {
+        display: flex;
+        column-gap: 20px;
+        padding-top: 224px;
+    }
+    &__column-left {
+        flex: 0 1 60%;
+    }
+    &__column-right {
+        flex: 0 1 40%;
+    }
+    &__title {
+        max-width: 687px;
+        font-size: 44px;
+        line-height: calc(54 / 44 * 100%);
+        color: #195B84;
+        text-transform: uppercase;
+        letter-spacing: 0.64px;
+        padding-bottom: 40px;
+        position: relative;
+        &::before {
+            content: "";
+            background: url('../img/line-icon.png') no-repeat;
+        }
+        span {
+            color: #2DAFD7;
+        }
+    }
+    &__picture {
+        position: relative;
+        display: block;
+        padding-bottom: 140%;
+        overflow: hidden;
+        margin-top: -65px;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -50%;
+            transform: translate(50%, 0);
+            object-fit: cover;
+        }
+    }
+    &__form {
+        max-width: 380px;
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        input[type="submit"] {
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"] {
+            padding: 18px 49px;
+            box-shadow: 5px 5px 20px rgba(0, 85, 112, 0.15);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            &::placeholder {
+                font-size: 16px;
+                line-height: calc(24 / 16 * 100%);
+                color: #99BBC6;
+                font-weight: normal;
+                font-family: $fontFamilyPoppins;
+            }
+        }
+        input[type="submit"] {
+            margin-top: 15px;
+            background: #2DAFCD;
+            box-shadow: 15px 5px 20px rgba(45, 175, 215, 0.2);
+            padding: 23px 109px;
+            font-size: 16px;
+            line-height: calc(24 / 16 * 100%);
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            &:hover {
+                background-color: #005570;
+            }
+        }
+        input[type="text"] {
+            background: #fff url(../img/icon-user.svg);
+            background-repeat: no-repeat;
+            background-position: 14px 18px;
+        }
+        input[type="email"] {
+            background: #fff url(../img/icons-mail.svg);
+            background-repeat: no-repeat;
+            background-position: 14px 18px;
+        }
+        input[type="phone"] {
+            background: #fff url(../img/icon-phone.svg);
+            background-repeat: no-repeat;
+            background-position: 14px 18px;
+        }
+    }
+}
+/*==========================================================================*/
+.bottom-top {
+    padding-top: 140px;
+    padding-bottom: 98px;
+    &__container {
+        display: grid;
+        column-gap: rem(30);
+        row-gap: rem(40);
+        grid-template-columns: repeat(auto-fill, minmax(204px, 1fr));
+        background: #FFFFFF;
+        box-shadow: 5px 5px 20px rgba(0, 85, 112, 0.15);
+        border-radius: 5px;
+        padding: 60px 5px;
+    }
+    &__content {
+        text-align: center;
+    }
+    &__column {
+        position: relative;
+        z-index: 2;
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: 0;
+            transform: translate(9px, 0px);
+            width: 5px;
+            height: 150px;
+            background: url(../img/vertical-line.png) 0 0 / 100% no-repeat;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        line-height: calc(30 / 20 * 100%);
+        font-weight: 700;
+        color: #195B84;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+    }
+    &__number {
+        font-size: 144px;
+        line-height: calc(216 / 144 * 100%);
+        color: rgba(246, 246, 246, 0.8);
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        z-index: -1;
+    }
+}
